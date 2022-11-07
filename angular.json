@@ -3,6 +3,8 @@
   "projects": {
     "blue": "apps/blue",
     "blue-e2e": "apps/blue-e2e",
+    "green": "apps/green",
+    "green-e2e": "apps/green-e2e",
     "red": "apps/red",
     "red-e2e": "apps/red-e2e"
   }
