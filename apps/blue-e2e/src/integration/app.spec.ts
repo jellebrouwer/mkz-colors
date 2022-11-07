@@ -1,13 +1,26 @@
-import { getGreeting } from '../support/app.po';
-
 describe('blue', () => {
-  beforeEach(() => cy.visit('/'));
+  before(() => {
+    cy.eyesOpen({
+      appName: 'Colors',
+      testName: 'blue',
+    });
+  });
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  after(() => {
+    cy.eyesClose();
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome blue');
+  it('should display blue', () => {
+    cy.visit('');
+    cy.contains('Welcome blue');
+    cy.eyesCheckWindow({
+      target: 'region',
+      selector: {
+        type: 'css',
+        selector: '[data-cy="main-container"]',
+      },
+      layout: [{ selector: '[data-cy="main-container"]' }],
+      tag: 'Blue overview',
+    });
   });
 });
