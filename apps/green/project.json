@@ -58,12 +58,13 @@
           "browserTarget": "green:build:production"
         },
         "development": {
-          "browserTarget": "green:build:development"
+          "browserTarget": "green:build:development",
+          "proxyConfig": "apps/green/proxy.conf.js"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4202
+        "port": 4201
       }
     },
     "extract-i18n": {

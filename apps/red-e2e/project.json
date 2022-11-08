@@ -15,6 +15,16 @@
         }
       }
     },
+    "e2e-mock": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npx start-server-and-test 'npx nx serve mocking-server --args=port=3002' http://localhost:3002/mocking 'npx nx e2e red-e2e'"
+          }
+        ]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

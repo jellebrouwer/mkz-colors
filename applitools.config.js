@@ -16,13 +16,13 @@ module.exports = {
       },
     },
   ],
-  // failCypressOnDiff: true,
-  // ignoreDisplacements: true,
-  // layoutBreakpoints: true,
+  failCypressOnDiff: true,
+  ignoreDisplacements: true,
+  layoutBreakpoints: true,
   batch: {
     name: 'mkz-colors',
   },
-  // visualGridOptions: {
-  //   stabilizationDelayPostNavigationMs: 1000,
-  // },
+  visualGridOptions: {
+    stabilizationDelayPostNavigationMs: 1000,
+  },
 };

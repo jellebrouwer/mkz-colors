@@ -58,10 +58,14 @@
           "browserTarget": "blue:build:production"
         },
         "development": {
-          "browserTarget": "blue:build:development"
+          "browserTarget": "blue:build:development",
+          "proxyConfig": "apps/blue/proxy.conf.js"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",

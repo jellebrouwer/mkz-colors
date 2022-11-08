@@ -1,3 +1,4 @@
 <div data-cy="main-container">
+  <div *ngIf="user$ | async as user">Hi {{ user.first_name }},</div>
   <mkz-colors-nx-welcome></mkz-colors-nx-welcome>
 </div>

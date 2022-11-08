@@ -1,0 +1,53 @@
+{
+  "root": "apps/mocking-server",
+  "sourceRoot": "apps/mocking-server/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mocking-server",
+        "main": "apps/mocking-server/src/main.ts",
+        "tsConfig": "apps/mocking-server/tsconfig.app.json",
+        "assets": ["apps/mocking-server/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/mocking-server/src/environments/environment.ts",
+              "with": "apps/mocking-server/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "mocking-server:build",
+        "port": 0
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mocking-server/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/mocking-server"],
+      "options": {
+        "jestConfig": "apps/mocking-server/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

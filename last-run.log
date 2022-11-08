@@ -1,0 +1,732 @@
+ mkz-colors@0.0.0 e2e
+> npx nx run-many --target=e2e-mock --all --parallel=3
+
+
+ >  NX   Running target e2e-mock for 3 project(s):
+
+    - green-e2e
+    - blue-e2e
+    - red-e2e
+
+ —————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+> nx run green-e2e:e2e-mock
+
+
+> nx run blue-e2e:e2e-mock
+
+
+> nx run red-e2e:e2e-mock
+
+1: starting server using command "npx nx serve mocking-server --args=port=3000"
+1: starting server using command "npx nx serve mocking-server --args=port=3001"
+1: starting server using command "npx nx serve mocking-server --args=port=3002"
+and when url "[ 'http://localhost:3001/mocking' ]" is responding with HTTP status code 200
+and when url "[ 'http://localhost:3000/mocking' ]" is responding with HTTP status code 200
+running tests using command "npx nx e2e blue-e2e"
+running tests using command "npx nx e2e green-e2e"
+
+
+and when url "[ 'http://localhost:3002/mocking' ]" is responding with HTTP status code 200
+running tests using command "npx nx e2e red-e2e"
+
+
+> nx run mocking-server:serve --args=port=3000
+
+
+> nx run mocking-server:serve --args=port=3001
+
+
+> nx run mocking-server:serve --args=port=3002
+
+chunk (runtime: main) main.js (main) 1.37 KiB [entry] [rendered]
+webpack compiled successfully (06af6438955edeef)
+chunk (runtime: main) main.js (main) 1.37 KiB [entry] [rendered]
+webpack compiled successfully (06af6438955edeef)
+chunk (runtime: main) main.js (main) 1.37 KiB [entry] [rendered]
+webpack compiled successfully (06af6438955edeef)
+Debugger listening on ws://localhost:56479/47c7e922-e2b3-4ef0-bde2-ff8c74f0d766
+Debugger listening on ws://localhost:56480/47c7e922-e2b3-4ef0-bde2-ff8c74f0d766
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger listening on ws://localhost:56481/0389b9ff-0067-432e-a9f5-7bc3ad1d1e80
+Debugger listening on ws://localhost:56482/0389b9ff-0067-432e-a9f5-7bc3ad1d1e80
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger listening on ws://localhost:56483/8ef8b895-8ebb-490e-a320-804a7e5cacec
+Debugger listening on ws://localhost:56484/8ef8b895-8ebb-490e-a320-804a7e5cacec
+For help, see: https://nodejs.org/en/docs/inspector
+@ng-apimock/core running on port 3000
+@ng-apimock/core running on port 3002
+@ng-apimock/core running on port 3001
+
+> nx run red-e2e:e2e
+
+
+
+> nx run blue-e2e:e2e
+
+> nx run green-e2e:e2e
+
+- Generating browser application bundles (phase: setup)...
+- Generating browser application bundles (phase: setup)...
+- Generating browser application bundles (phase: setup)...
+info: [HPM] Proxy created: /user  -> http://localhost:3002
+info: [HPM] Proxy created: /user  -> http://localhost:3000
+info: [HPM] Proxy created: /user  -> http://localhost:3001
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   1.78 MB | 
+polyfills.js          | polyfills     | 296.98 kB | 
+styles.css, styles.js | styles        | 173.74 kB | 
+main.js               | main          |  48.24 kB | 
+runtime.js            | runtime       |   6.51 kB | 
+
+                      | Initial Total |   2.29 MB
+
+Build at: 2022-11-08T19:18:59.527Z - Hash: 4a835d46b886c484 - Time: 4224ms
+
+** Angular Live Development Server is listening on localhost:4201, open your browser on http://localhost:4201/ **
+
+
+✔ Compiled successfully.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   1.78 MB | 
+polyfills.js          | polyfills     | 296.97 kB | 
+styles.css, styles.js | styles        | 173.74 kB | 
+main.js               | main          |  48.22 kB | 
+runtime.js            | runtime       |   6.51 kB | 
+
+                      | Initial Total |   2.29 MB
+
+Build at: 2022-11-08T19:18:59.528Z - Hash: f4f13058a961851c - Time: 4225ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+✔ Compiled successfully.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   1.78 MB | 
+polyfills.js          | polyfills     | 296.97 kB | 
+styles.css, styles.js | styles        | 173.73 kB | 
+main.js               | main          |  48.20 kB | 
+runtime.js            | runtime       |   6.50 kB | 
+
+                      | Initial Total |   2.29 MB
+
+Build at: 2022-11-08T19:18:59.530Z - Hash: 5de41d8437c3faa2 - Time: 4227ms
+
+** Angular Live Development Server is listening on localhost:4202, open your browser on http://localhost:4202/ **
+
+
+✔ Compiled successfully.
+objc[37730]: Class WebSwapCGLLayer is implemented in both /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Frameworks/libANGLE-shared.dylib (0x7ffb5b9b3ec8) and /Users/jbrouwer/Library/Caches/Cypress/9.7.0/Cypress.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib (0x11d6e39c8). One of the two will be used. Which one is undefined.
+objc[37729]: Class WebSwapCGLLayer is implemented in both /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Frameworks/libANGLE-shared.dylib (0x7ffb5b9b3ec8) and /Users/jbrouwer/Library/Caches/Cypress/9.7.0/Cypress.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib (0x1177459c8). One of the two will be used. Which one is undefined.
+objc[37728]: Class WebSwapCGLLayer is implemented in both /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/Frameworks/libANGLE-shared.dylib (0x7ffb5b9b3ec8) and /Users/jbrouwer/Library/Caches/Cypress/9.7.0/Cypress.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib (0x11c8e09c8). One of the two will be used. Which one is undefined.
+eyes      | 2022-11-08T19:19:23.481Z [INFO ] plugin server running at port: 56524
+eyes      | 2022-11-08T19:19:23.481Z [INFO ] plugin server running at port: 56522
+eyes      | 2022-11-08T19:19:23.481Z [INFO ] plugin server running at port: 56523
+{
+  animationDistanceThreshold: 5,
+  baseUrl: 'http://localhost:4200/',
+  blockHosts: null,
+  browsers: [
+    {
+      name: 'chrome',
+      family: 'chromium',
+      channel: 'stable',
+      displayName: 'Chrome',
+      version: '107.0.5304.87',
+      path: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      minSupportedVersion: 64,
+      majorVersion: 107
+    },
+    {
+      name: 'electron',
+      channel: 'stable',
+      family: 'chromium',
+      displayName: 'Electron',
+      version: '100.0.4896.75',
+      path: '',
+      majorVersion: 100,
+      info: 'Electron is the default browser that comes with Cypress. This is the default browser that runs in headless mode. Selecting this browser is useful when debugging. The version number indicates the underlying Chromium version that Electron uses.'
+    }
+  ],
+  chromeWebSecurity: false,
+  clientCertificates: [],
+  component: {},
+  componentFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/cypress/component',
+  configFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/cypress.json',
+  defaultCommandTimeout: 4000,
+  downloadsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/cypress/downloads',
+  e2e: {},
+  env: {
+    NG_API_MOCK_BASE_IDENTIFIER: 'ngapimock_id_3000',
+    NG_API_MOCK_BASE_URL: 'http://localhost:3000',
+    NG_API_MOCK_ENABLE_LOGS: 'true'
+  },
+  execTimeout: 60000,
+  experimentalFetchPolyfill: false,
+  experimentalInteractiveRunEvents: false,
+  experimentalSessionAndOrigin: false,
+  experimentalSourceRewriting: false,
+  experimentalStudio: false,
+  fileServerFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e',
+  fixturesFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/src/fixtures',
+  hosts: null,
+  ignoreTestFiles: '*.hot-update.js',
+  includeShadowDom: false,
+  integrationFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/src/integration',
+  isInteractive: true,
+  keystrokeDelay: 0,
+  modifyObstructiveCode: false,
+  numTestsKeptInMemory: 0,
+  pageLoadTimeout: 60000,
+  pluginsFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/src/plugins/index.js',
+  port: null,
+  projectId: null,
+  projectRoot: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e',
+  redirectionLimit: 20,
+  reporter: 'spec',
+  reporterOptions: null,
+  requestTimeout: 5000,
+  resolvedNodePath: '/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node',
+  resolvedNodeVersion: '16.13.2',
+  responseTimeout: 30000,
+  retries: { runMode: 0, openMode: 0 },
+  screenshotOnRunFailure: true,
+  screenshotsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/blue-e2e/screenshots',
+  scrollBehavior: 'top',
+  slowTestThreshold: 10000,
+  supportFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/src/support/index.ts',
+  supportFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/blue-e2e/src/support',
+  taskTimeout: 60000,
+  testFiles: '**/*.*',
+  testingType: 'e2e',
+  trashAssetsBeforeRuns: true,
+  userAgent: null,
+  version: '9.7.0',
+  video: true,
+  videoCompression: 32,
+  videoUploadOnPasses: true,
+  videosFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/blue-e2e/videos',
+  viewportHeight: 660,
+  viewportWidth: 1000,
+  waitForAnimations: true,
+  watchForFileChanges: false
+}
+{
+  animationDistanceThreshold: 5,
+  baseUrl: 'http://localhost:4201/',
+  blockHosts: null,
+  browsers: [
+    {
+      name: 'chrome',
+      family: 'chromium',
+      channel: 'stable',
+      displayName: 'Chrome',
+      version: '107.0.5304.87',
+      path: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      minSupportedVersion: 64,
+      majorVersion: 107
+    },
+    {
+      name: 'electron',
+      channel: 'stable',
+      family: 'chromium',
+      displayName: 'Electron',
+      version: '100.0.4896.75',
+      path: '',
+      majorVersion: 100,
+      info: 'Electron is the default browser that comes with Cypress. This is the default browser that runs in headless mode. Selecting this browser is useful when debugging. The version number indicates the underlying Chromium version that Electron uses.'
+    }
+  ],
+  chromeWebSecurity: false,
+  clientCertificates: [],
+  component: {},
+  componentFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/cypress/component',
+  configFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/cypress.json',
+  defaultCommandTimeout: 4000,
+  downloadsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/cypress/downloads',
+  e2e: {},
+  env: {
+    NG_API_MOCK_BASE_IDENTIFIER: 'ngapimock_id_3001',
+    NG_API_MOCK_BASE_URL: 'http://localhost:3001',
+    NG_API_MOCK_ENABLE_LOGS: 'true'
+  },
+  execTimeout: 60000,
+  experimentalFetchPolyfill: false,
+  experimentalInteractiveRunEvents: false,
+  experimentalSessionAndOrigin: false,
+  experimentalSourceRewriting: false,
+  experimentalStudio: false,
+  fileServerFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e',
+  fixturesFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/src/fixtures',
+  hosts: null,
+  ignoreTestFiles: '*.hot-update.js',
+  includeShadowDom: false,
+  integrationFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/src/integration',
+  isInteractive: true,
+  keystrokeDelay: 0,
+  modifyObstructiveCode: false,
+  numTestsKeptInMemory: 0,
+  pageLoadTimeout: 60000,
+  pluginsFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/src/plugins/index.js',
+  port: null,
+  projectId: null,
+  projectRoot: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e',
+  redirectionLimit: 20,
+  reporter: 'spec',
+  reporterOptions: null,
+  requestTimeout: 5000,
+  resolvedNodePath: '/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node',
+  resolvedNodeVersion: '16.13.2',
+  responseTimeout: 30000,
+  retries: { runMode: 0, openMode: 0 },
+  screenshotOnRunFailure: true,
+  screenshotsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/green-e2e/screenshots',
+  scrollBehavior: 'top',
+  slowTestThreshold: 10000,
+  supportFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/src/support/index.ts',
+  supportFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/green-e2e/src/support',
+  taskTimeout: 60000,
+  testFiles: '**/*.*',
+  testingType: 'e2e',
+  trashAssetsBeforeRuns: true,
+  userAgent: null,
+  version: '9.7.0',
+  video: true,
+  videoCompression: 32,
+  videoUploadOnPasses: true,
+  videosFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/green-e2e/videos',
+  viewportHeight: 660,
+  viewportWidth: 1000,
+  waitForAnimations: true,
+  watchForFileChanges: false
+}
+{
+  animationDistanceThreshold: 5,
+  baseUrl: 'http://localhost:4202/',
+  blockHosts: null,
+  browsers: [
+    {
+      name: 'chrome',
+      family: 'chromium',
+      channel: 'stable',
+      displayName: 'Chrome',
+      version: '107.0.5304.87',
+      path: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      minSupportedVersion: 64,
+      majorVersion: 107
+    },
+    {
+      name: 'electron',
+      channel: 'stable',
+      family: 'chromium',
+      displayName: 'Electron',
+      version: '100.0.4896.75',
+      path: '',
+      majorVersion: 100,
+      info: 'Electron is the default browser that comes with Cypress. This is the default browser that runs in headless mode. Selecting this browser is useful when debugging. The version number indicates the underlying Chromium version that Electron uses.'
+    }
+  ],
+  chromeWebSecurity: false,
+  clientCertificates: [],
+  component: {},
+  componentFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/cypress/component',
+  configFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/cypress.json',
+  defaultCommandTimeout: 4000,
+  downloadsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/cypress/downloads',
+  e2e: {},
+  env: {
+    NG_API_MOCK_BASE_IDENTIFIER: 'ngapimock_id_3002',
+    NG_API_MOCK_BASE_URL: 'http://localhost:3002',
+    NG_API_MOCK_ENABLE_LOGS: 'true'
+  },
+  execTimeout: 60000,
+  experimentalFetchPolyfill: false,
+  experimentalInteractiveRunEvents: false,
+  experimentalSessionAndOrigin: false,
+  experimentalSourceRewriting: false,
+  experimentalStudio: false,
+  fileServerFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e',
+  fixturesFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/src/fixtures',
+  hosts: null,
+  ignoreTestFiles: '*.hot-update.js',
+  includeShadowDom: false,
+  integrationFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/src/integration',
+  isInteractive: true,
+  keystrokeDelay: 0,
+  modifyObstructiveCode: false,
+  numTestsKeptInMemory: 0,
+  pageLoadTimeout: 60000,
+  pluginsFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/src/plugins/index.js',
+  port: null,
+  projectId: null,
+  projectRoot: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e',
+  redirectionLimit: 20,
+  reporter: 'spec',
+  reporterOptions: null,
+  requestTimeout: 5000,
+  resolvedNodePath: '/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node',
+  resolvedNodeVersion: '16.13.2',
+  responseTimeout: 30000,
+  retries: { runMode: 0, openMode: 0 },
+  screenshotOnRunFailure: true,
+  screenshotsFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/red-e2e/screenshots',
+  scrollBehavior: 'top',
+  slowTestThreshold: 10000,
+  supportFile: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/src/support/index.ts',
+  supportFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/apps/red-e2e/src/support',
+  taskTimeout: 60000,
+  testFiles: '**/*.*',
+  testingType: 'e2e',
+  trashAssetsBeforeRuns: true,
+  userAgent: null,
+  version: '9.7.0',
+  video: true,
+  videoCompression: 32,
+  videoUploadOnPasses: true,
+  videosFolder: '/Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/apps/red-e2e/videos',
+  viewportHeight: 660,
+  viewportWidth: 1000,
+  waitForAnimations: true,
+  watchForFileChanges: false
+}
+
+
+
+====================================================================================================
+
+====================================================================================================
+
+====================================================================================================
+
+  (Run Starting)
+
+  (Run Starting)
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        9.7.0                                                                          │
+  │ Browser:        Electron 100 (headless)                                                        │
+  │ Node Version:   v16.13.2 (/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node)                │
+  │ Specs:          1 found (app.spec.ts)                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        9.7.0                                                                          │
+  │ Browser:        Electron 100 (headless)                                                        │
+  │ Node Version:   v16.13.2 (/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node)                │
+  │ Specs:          1 found (app.spec.ts)                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        9.7.0                                                                          │
+  │ Browser:        Electron 100 (headless)                                                        │
+  │ Node Version:   v16.13.2 (/Users/jbrouwer/.nvm/versions/node/v16.13.2/bin/node)                │
+  │ Specs:          1 found (app.spec.ts)                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  app.spec.ts                                                                     (1 of 1)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  app.spec.ts                                                                     (1 of 1)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  app.spec.ts                                                                     (1 of 1)
+
+
+  green
+
+
+
+
+  blue
+  red
+eyes      | 2022-11-08T19:19:31.925Z [INFO ] ==>  {"name":"Core.makeSDK","payload":{"name":"eyes.cypress","version":"3.27.6","commands":["executeScript","mainContext","parentContext","childContext","getViewportSize","setViewportSize","transformSelector","findElement","findElements","getTitle","getUrl","getCookies","isSelector","isDriver","isElement"]}}
+eyes      | 2022-11-08T19:19:31.925Z [INFO ] ==>  {"name":"Core.makeManager","key":"3f85a661-d429-4544-9a19-4ee78bf422d3","payload":{"concurrency":20,"legacy":false,"type":"vg"}}
+eyes      | 2022-11-08T19:19:31.931Z [INFO ] <==  {"name":"Server.log","payload":{"level":"info","message":"Logs saved in: /var/folders/c4/ybkqmgg51w71nt0hd5_flmrr0000gn/T/applitools-logs"}}
+eyes      | 2022-11-08T19:19:31.934Z [INFO ] <==  {"name":"Core.makeManager","key":"3f85a661-d429-4544-9a19-4ee78bf422d3","payload":{"result":{"applitools-ref-id":"dd11df2a-138d-4e48-bed8-2d6822d4e36f"}}}
+eyes      | 2022-11-08T19:19:31.936Z [INFO ] ==>  {"name":"EyesManager.openEyes","key":"360619b0-b401-4cac-923a-622ffe53d2eb","payload":{"manager":{"applitools-ref-id":"dd11df2a-138d-4e48-bed8-2d6822d4e36f"},"driver":{"applitools-ref-id":"4a1abc18-4739-4671-8b58-21a35ae0da08","type":"context"},"config":{"testName":"green","dontCloseBatches":true,"testConcurrency":20,"serverUrl":"https://kpneyes.applitools.com/","apiKey":"rdxONe9zIxKd5pbopLArGCK3gR4xzwnfwz3YuysnH7M110","parentBranchName":"mkz-colors/main","branchName":"mkz-colors/some-branch","showLogs":true,"failCypressOnDiff":true,"layoutBreakpoints":true,"batch":{"id":"c09b71c5-3a77-4cff-a49f-fe7c0ff0ccd5","name":"mkz-colors"},"visualGridOptions":{"stabilizationDelayPostNavigationMs":1000},"appName":"Colors","browsersInfo":[{"width":1280,"height":600,"name":"chrome"},{"iosDeviceInfo":{"deviceName":"iPhone X","iosVersion":"latest"}}],"defaultMatchSettings":{"ignoreDisplacements":true}}}}
+eyes      | 2022-11-08T19:19:31.944Z [INFO ] <==  {"name":"Driver.executeScript","key":"de45ea4c-bb3c-4b64-8e7c-22722a8aec4e","payload":{"context":{"applitools-ref-id":"4a1abc18-4739-4671-8b58-21a35ae0da08","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:31.946Z [INFO ] ==>  {"name":"Driver.executeScript","key":"de45ea4c-bb3c-4b64-8e7c-22722a8aec4e","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:31.949Z [INFO ] <==  {"name":"Driver.executeScript","key":"931ac5a2-de5c-42f5-8fc5-b602ea368b60","payload":{"context":{"applitools-ref-id":"4a1abc18-4739-4671-8b58-21a35ae0da08","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:31.951Z [INFO ] ==>  {"name":"Driver.executeScript","key":"931ac5a2-de5c-42f5-8fc5-b602ea368b60","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:31.951Z [INFO ] <==  {"name":"Driver.executeScript","key":"fc37bda4-3321-4bda-babf-10dabed0d20d","payload":{"context":{"applitools-ref-id":"4a1abc18-4739-4671-8b58-21a35ae0da08","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:31.953Z [INFO ] ==>  {"name":"Driver.executeScript","key":"fc37bda4-3321-4bda-babf-10dabed0d20d","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:31.955Z [INFO ] <==  {"name":"Driver.executeScript","key":"1ca338ac-7bbd-4d6a-86d6-0a06d2d9dc5d","payload":{"context":{"applitools-ref-id":"4a1abc18-4739-4671-8b58-21a35ae0da08","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:31.956Z [INFO ] ==>  {"name":"Driver.executeScript","key":"1ca338ac-7bbd-4d6a-86d6-0a06d2d9dc5d","payload":{"result":[{"applitools-ref-id":"7d704ca7-d339-4b3f-be7a-48f145ca3244","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:32.060Z [INFO ] ==>  {"name":"Core.makeSDK","payload":{"name":"eyes.cypress","version":"3.27.6","commands":["executeScript","mainContext","parentContext","childContext","getViewportSize","setViewportSize","transformSelector","findElement","findElements","getTitle","getUrl","getCookies","isSelector","isDriver","isElement"]}}
+eyes      | 2022-11-08T19:19:32.060Z [INFO ] ==>  {"name":"Core.makeManager","key":"52dc99ed-475b-4bab-b9bb-01da16c260a1","payload":{"concurrency":20,"legacy":false,"type":"vg"}}
+eyes      | 2022-11-08T19:19:32.065Z [INFO ] <==  {"name":"Server.log","payload":{"level":"info","message":"Logs saved in: /var/folders/c4/ybkqmgg51w71nt0hd5_flmrr0000gn/T/applitools-logs"}}
+eyes      | 2022-11-08T19:19:32.066Z [INFO ] <==  {"name":"Core.makeManager","key":"52dc99ed-475b-4bab-b9bb-01da16c260a1","payload":{"result":{"applitools-ref-id":"66f6cfd0-b2a0-4d12-ab7b-2ba145e09044"}}}
+eyes      | 2022-11-08T19:19:32.068Z [INFO ] ==>  {"name":"EyesManager.openEyes","key":"a1246a97-5929-45c4-bda1-a320787d75d4","payload":{"manager":{"applitools-ref-id":"66f6cfd0-b2a0-4d12-ab7b-2ba145e09044"},"driver":{"applitools-ref-id":"60037c55-ab02-4692-a021-382de1d5b513","type":"context"},"config":{"testName":"red","dontCloseBatches":true,"testConcurrency":20,"serverUrl":"https://kpneyes.applitools.com/","apiKey":"rdxONe9zIxKd5pbopLArGCK3gR4xzwnfwz3YuysnH7M110","parentBranchName":"mkz-colors/main","branchName":"mkz-colors/some-branch","showLogs":true,"failCypressOnDiff":true,"layoutBreakpoints":true,"batch":{"id":"c09b71c5-3a77-4cff-a49f-fe7c0ff0ccd5","name":"mkz-colors"},"visualGridOptions":{"stabilizationDelayPostNavigationMs":1000},"appName":"Colors","browsersInfo":[{"width":1280,"height":600,"name":"chrome"},{"iosDeviceInfo":{"deviceName":"iPhone X","iosVersion":"latest"}}],"defaultMatchSettings":{"ignoreDisplacements":true}}}}
+eyes      | 2022-11-08T19:19:32.069Z [INFO ] <==  {"name":"Driver.executeScript","key":"fbae1fc5-cbcb-45ea-91a3-bce3c8d1c1eb","payload":{"context":{"applitools-ref-id":"60037c55-ab02-4692-a021-382de1d5b513","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.071Z [INFO ] ==>  {"name":"Driver.executeScript","key":"fbae1fc5-cbcb-45ea-91a3-bce3c8d1c1eb","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:32.072Z [INFO ] <==  {"name":"Driver.executeScript","key":"db7121b5-8ef0-48fe-9855-58975182ddab","payload":{"context":{"applitools-ref-id":"60037c55-ab02-4692-a021-382de1d5b513","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.073Z [INFO ] ==>  {"name":"Driver.executeScript","key":"db7121b5-8ef0-48fe-9855-58975182ddab","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:32.074Z [INFO ] <==  {"name":"Driver.executeScript","key":"005514fb-ebcf-4539-b7ef-88de2603dc73","payload":{"context":{"applitools-ref-id":"60037c55-ab02-4692-a021-382de1d5b513","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.075Z [INFO ] ==>  {"name":"Driver.executeScript","key":"005514fb-ebcf-4539-b7ef-88de2603dc73","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:32.076Z [INFO ] <==  {"name":"Driver.executeScript","key":"7b5d4f9d-344d-4aa4-ba3d-cda9ea331e6a","payload":{"context":{"applitools-ref-id":"60037c55-ab02-4692-a021-382de1d5b513","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.078Z [INFO ] ==>  {"name":"Driver.executeScript","key":"7b5d4f9d-344d-4aa4-ba3d-cda9ea331e6a","payload":{"result":[{"applitools-ref-id":"e0b73276-566e-4bba-9a93-0f08ce3e2c4f","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:32.102Z [INFO ] ==>  {"name":"Core.makeSDK","payload":{"name":"eyes.cypress","version":"3.27.6","commands":["executeScript","mainContext","parentContext","childContext","getViewportSize","setViewportSize","transformSelector","findElement","findElements","getTitle","getUrl","getCookies","isSelector","isDriver","isElement"]}}
+eyes      | 2022-11-08T19:19:32.102Z [INFO ] ==>  {"name":"Core.makeManager","key":"87f37810-b3cc-45bd-8bdd-876b2b94c5f4","payload":{"concurrency":20,"legacy":false,"type":"vg"}}
+eyes      | 2022-11-08T19:19:32.107Z [INFO ] <==  {"name":"Server.log","payload":{"level":"info","message":"Logs saved in: /var/folders/c4/ybkqmgg51w71nt0hd5_flmrr0000gn/T/applitools-logs"}}
+eyes      | 2022-11-08T19:19:32.108Z [INFO ] <==  {"name":"Core.makeManager","key":"87f37810-b3cc-45bd-8bdd-876b2b94c5f4","payload":{"result":{"applitools-ref-id":"11de5d06-4397-4acf-b28c-97832eefcefc"}}}
+eyes      | 2022-11-08T19:19:32.109Z [INFO ] ==>  {"name":"EyesManager.openEyes","key":"2b4e1e65-af2c-4db4-91c9-c085a2d179ad","payload":{"manager":{"applitools-ref-id":"11de5d06-4397-4acf-b28c-97832eefcefc"},"driver":{"applitools-ref-id":"7f49bf84-7524-4dd4-ab9b-f1500a262293","type":"context"},"config":{"testName":"blue","dontCloseBatches":true,"testConcurrency":20,"serverUrl":"https://kpneyes.applitools.com/","apiKey":"rdxONe9zIxKd5pbopLArGCK3gR4xzwnfwz3YuysnH7M110","parentBranchName":"mkz-colors/main","branchName":"mkz-colors/some-branch","showLogs":true,"failCypressOnDiff":true,"layoutBreakpoints":true,"batch":{"id":"c09b71c5-3a77-4cff-a49f-fe7c0ff0ccd5","name":"mkz-colors"},"visualGridOptions":{"stabilizationDelayPostNavigationMs":1000},"appName":"Colors","browsersInfo":[{"width":1280,"height":600,"name":"chrome"},{"iosDeviceInfo":{"deviceName":"iPhone X","iosVersion":"latest"}}],"defaultMatchSettings":{"ignoreDisplacements":true}}}}
+eyes      | 2022-11-08T19:19:32.111Z [INFO ] <==  {"name":"Driver.executeScript","key":"28f2937a-1697-4443-b8ad-99d41d2838ce","payload":{"context":{"applitools-ref-id":"7f49bf84-7524-4dd4-ab9b-f1500a262293","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.113Z [INFO ] ==>  {"name":"Driver.executeScript","key":"28f2937a-1697-4443-b8ad-99d41d2838ce","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:32.114Z [INFO ] <==  {"name":"Driver.executeScript","key":"78cd91ca-e3e4-43be-9015-6a188968cab5","payload":{"context":{"applitools-ref-id":"7f49bf84-7524-4dd4-ab9b-f1500a262293","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.115Z [INFO ] ==>  {"name":"Driver.executeScript","key":"78cd91ca-e3e4-43be-9015-6a188968cab5","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:32.116Z [INFO ] <==  {"name":"Driver.executeScript","key":"253ff801-8dd6-4a3b-9a3d-684deb607c27","payload":{"context":{"applitools-ref-id":"7f49bf84-7524-4dd4-ab9b-f1500a262293","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.121Z [INFO ] ==>  {"name":"Driver.executeScript","key":"253ff801-8dd6-4a3b-9a3d-684deb607c27","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:32.122Z [INFO ] <==  {"name":"Driver.executeScript","key":"2c764b5d-0188-4e1a-929e-76d4c0a8a7c3","payload":{"context":{"applitools-ref-id":"7f49bf84-7524-4dd4-ab9b-f1500a262293","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:32.124Z [INFO ] ==>  {"name":"Driver.executeScript","key":"2c764b5d-0188-4e1a-929e-76d4c0a8a7c3","payload":{"result":[{"applitools-ref-id":"693e629e-f8d6-464a-81fa-c8eb59f7a67e","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:32.187Z [INFO ] <==  {"name":"EyesManager.openEyes","key":"360619b0-b401-4cac-923a-622ffe53d2eb","payload":{"result":{"applitools-ref-id":"a68c904e-be80-4e88-bbcf-b3149839a97c"}}}
+eyes      | 2022-11-08T19:19:32.203Z [INFO ] <==  {"name":"EyesManager.openEyes","key":"2b4e1e65-af2c-4db4-91c9-c085a2d179ad","payload":{"result":{"applitools-ref-id":"4b107353-217d-4e2e-a213-f32140c98a58"}}}
+eyes      | 2022-11-08T19:19:32.207Z [INFO ] <==  {"name":"EyesManager.openEyes","key":"a1246a97-5929-45c4-bda1-a320787d75d4","payload":{"result":{"applitools-ref-id":"477ee052-d5bd-4899-b169-bf7ccc579f42"}}}
+eyes      | 2022-11-08T19:19:34.109Z [INFO ] ==>  {"name":"Eyes.check","key":"99ed7a35-aee8-4f61-9949-e4df45a0e321","payload":{"eyes":{"applitools-ref-id":"4b107353-217d-4e2e-a213-f32140c98a58"},"settings":{"name":"Blue overview","layoutRegions":[{"selector":"[data-cy=\"main-container\"]"}],"region":{"type":"css","selector":"[data-cy=\"main-container\"]"},"target":"region"},"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.111Z [INFO ] <==  {"name":"Driver.executeScript","key":"65a5cd05-680f-4e85-8fda-5b0df95252f0","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.123Z [INFO ] ==>  {"name":"Driver.executeScript","key":"65a5cd05-680f-4e85-8fda-5b0df95252f0","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.124Z [INFO ] <==  {"name":"Driver.executeScript","key":"adc874d4-ebbf-4a0d-a438-1273fb6d5db3","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.128Z [INFO ] ==>  {"name":"Driver.executeScript","key":"adc874d4-ebbf-4a0d-a438-1273fb6d5db3","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.129Z [INFO ] <==  {"name":"Driver.executeScript","key":"6eaae2ff-7945-4f0e-8aff-b276b2e85625","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.130Z [INFO ] ==>  {"name":"Driver.executeScript","key":"6eaae2ff-7945-4f0e-8aff-b276b2e85625","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:34.131Z [INFO ] <==  {"name":"Driver.executeScript","key":"bf58a6cf-a58c-4878-b3d9-5cd3241de911","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.133Z [INFO ] ==>  {"name":"Driver.executeScript","key":"bf58a6cf-a58c-4878-b3d9-5cd3241de911","payload":{"result":[{"applitools-ref-id":"0a50a38f-5f61-468c-9d47-c8c207247ea9","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:34.135Z [INFO ] <==  {"name":"Driver.findElements","key":"825a8b69-8025-4a86-8408-888b4d86dacc","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]","type":"css"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.136Z [INFO ] ==>  {"name":"Driver.findElements","key":"825a8b69-8025-4a86-8408-888b4d86dacc","payload":{"result":[{"applitools-ref-id":"495d50ca-b6b6-40c3-865d-253c50f48fd2","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.137Z [INFO ] <==  {"name":"Driver.findElements","key":"45f931ae-df4d-47a4-8796-e5c68346f07f","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.139Z [INFO ] ==>  {"name":"Driver.findElements","key":"45f931ae-df4d-47a4-8796-e5c68346f07f","payload":{"result":[{"applitools-ref-id":"1441f11c-6122-40df-a5b4-a61d2546ff35","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.139Z [INFO ] <==  {"name":"Driver.executeScript","key":"afb87075-a631-490a-822a-4f2f901e0e3d","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){var o=t[0],e=t[1];return o.map((function(t,o){var r=[t];if(t.getRootNode)for(var a=t.getRootNode();a!==document;a=a.host.getRootNode())r.push(a.host);var n=e[o];return r.map((function(t){var o=t.getAttribute(\"data-applitools-selector\"),e=o?o+\" \"+n:n;return t.setAttribute(\"data-applitools-selector\",e),'[data-applitools-selector~=\"'+n+'\"]'}))}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"495d50ca-b6b6-40c3-865d-253c50f48fd2","type":"element"},{"applitools-ref-id":"1441f11c-6122-40df-a5b4-a61d2546ff35","type":"element"}],["1491b672-8012-4a4f-be13-a3eb2516896a","b7cf4b2e-e6e4-4293-8d82-d96a40eed3d4"]]}}
+eyes      | 2022-11-08T19:19:34.141Z [INFO ] ==>  {"name":"Driver.executeScript","key":"afb87075-a631-490a-822a-4f2f901e0e3d","payload":{"result":[["[data-applitools-selector~=\"1491b672-8012-4a4f-be13-a3eb2516896a\"]"],["[data-applitools-selector~=\"b7cf4b2e-e6e4-4293-8d82-d96a40eed3d4\"]"]]}}
+eyes      | 2022-11-08T19:19:34.179Z [INFO ] ==>  {"name":"Eyes.check","key":"ae754ee4-ffcb-4cc4-9aef-fbe6e518f8bf","payload":{"eyes":{"applitools-ref-id":"a68c904e-be80-4e88-bbcf-b3149839a97c"},"settings":{"name":"Green overview","layoutRegions":[{"selector":"[data-cy=\"main-container\"]"}],"region":{"type":"css","selector":"[data-cy=\"main-container\"]"},"target":"region"},"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.180Z [INFO ] <==  {"name":"Driver.executeScript","key":"8f52e12c-b3e7-4a50-9bf2-aa2ffb7cc787","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.197Z [INFO ] ==>  {"name":"Driver.executeScript","key":"8f52e12c-b3e7-4a50-9bf2-aa2ffb7cc787","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.197Z [INFO ] <==  {"name":"Driver.executeScript","key":"c9ee61ce-89d6-47f6-8fd5-c7920f8f4457","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.236Z [INFO ] ==>  {"name":"Eyes.check","key":"8fcb1e15-c5be-4735-bd91-3159f9834daf","payload":{"eyes":{"applitools-ref-id":"477ee052-d5bd-4899-b169-bf7ccc579f42"},"settings":{"name":"Red overview","layoutRegions":[{"selector":"[data-cy=\"main-container\"]"}],"region":{"type":"css","selector":"[data-cy=\"main-container\"]"},"target":"region"},"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.237Z [INFO ] <==  {"name":"Driver.executeScript","key":"342732f9-dc4a-49a5-80f0-c399cc5b43b9","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.devicePixelRatio}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.248Z [INFO ] ==>  {"name":"Driver.executeScript","key":"342732f9-dc4a-49a5-80f0-c399cc5b43b9","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.249Z [INFO ] <==  {"name":"Driver.executeScript","key":"59e71cce-b1cf-43a7-8fa4-b13353ea1b32","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.visualViewport&&window.visualViewport.scale}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.250Z [INFO ] ==>  {"name":"Driver.executeScript","key":"59e71cce-b1cf-43a7-8fa4-b13353ea1b32","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.251Z [INFO ] <==  {"name":"Driver.executeScript","key":"d5d429a4-7709-4eed-977e-47cedb07caa5","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.252Z [INFO ] ==>  {"name":"Driver.executeScript","key":"d5d429a4-7709-4eed-977e-47cedb07caa5","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:34.253Z [INFO ] <==  {"name":"Driver.executeScript","key":"d402606f-4e88-400d-9d12-c00fe5dc8616","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.255Z [INFO ] ==>  {"name":"Driver.executeScript","key":"d402606f-4e88-400d-9d12-c00fe5dc8616","payload":{"result":[{"applitools-ref-id":"74b64700-fddd-4b26-88cb-996e7a75b1ba","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:34.256Z [INFO ] <==  {"name":"Driver.findElements","key":"e53a3936-357b-42b9-b469-0489a98cc7f2","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]","type":"css"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.259Z [INFO ] ==>  {"name":"Driver.findElements","key":"e53a3936-357b-42b9-b469-0489a98cc7f2","payload":{"result":[{"applitools-ref-id":"b7cc2c23-cf96-41ec-be3b-22cd363555ef","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.260Z [INFO ] <==  {"name":"Driver.findElements","key":"6bd8ebbb-255a-475f-b24d-092f0b53c0aa","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.263Z [INFO ] ==>  {"name":"Driver.findElements","key":"6bd8ebbb-255a-475f-b24d-092f0b53c0aa","payload":{"result":[{"applitools-ref-id":"0184f661-812c-4314-8883-5f4bbbf639e0","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.263Z [INFO ] <==  {"name":"Driver.executeScript","key":"46d13963-81ae-465b-952f-34f9a434a35f","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){var o=t[0],e=t[1];return o.map((function(t,o){var r=[t];if(t.getRootNode)for(var a=t.getRootNode();a!==document;a=a.host.getRootNode())r.push(a.host);var n=e[o];return r.map((function(t){var o=t.getAttribute(\"data-applitools-selector\"),e=o?o+\" \"+n:n;return t.setAttribute(\"data-applitools-selector\",e),'[data-applitools-selector~=\"'+n+'\"]'}))}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"b7cc2c23-cf96-41ec-be3b-22cd363555ef","type":"element"},{"applitools-ref-id":"0184f661-812c-4314-8883-5f4bbbf639e0","type":"element"}],["c0e7cb49-5064-4af5-8c6b-841c1a154c47","4c174a4d-be24-487f-8d4a-5ec0f9aecddb"]]}}
+eyes      | 2022-11-08T19:19:34.265Z [INFO ] ==>  {"name":"Driver.executeScript","key":"46d13963-81ae-465b-952f-34f9a434a35f","payload":{"result":[["[data-applitools-selector~=\"c0e7cb49-5064-4af5-8c6b-841c1a154c47\"]"],["[data-applitools-selector~=\"4c174a4d-be24-487f-8d4a-5ec0f9aecddb\"]"]]}}
+eyes      | 2022-11-08T19:19:34.314Z [INFO ] ==>  {"name":"Driver.executeScript","key":"c9ee61ce-89d6-47f6-8fd5-c7920f8f4457","payload":{"result":1}}
+eyes      | 2022-11-08T19:19:34.315Z [INFO ] <==  {"name":"Driver.executeScript","key":"ea6be829-335f-42ce-948d-e2b8a3a801df","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(){return window.navigator.userAgent}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.316Z [INFO ] ==>  {"name":"Driver.executeScript","key":"ea6be829-335f-42ce-948d-e2b8a3a801df","payload":{"result":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36"}}
+eyes      | 2022-11-08T19:19:34.317Z [INFO ] <==  {"name":"Driver.executeScript","key":"c17ac6ef-b8ca-4334-838c-5c441408baf4","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";var t=function(t){var n=(void 0===t?[]:t)[0],e=\"\",r=n.ownerDocument;if(!r)return e;for(var o=n;o!==r;){var a=Array.prototype.filter.call(o.parentNode.childNodes,(function(t){return t.tagName===o.tagName})).indexOf(o);e=\"/\"+o.tagName+\"[\"+(a+1)+\"]\"+e,o=o.parentNode}return e};return function(){var n,e,r;try{n=window.top.document===window.document||\"root-context\"===window.document[\"applitools-marker\"]}catch(t){n=!1}try{e=!window.parent.document===window.document}catch(t){e=!0}if(!e)try{r=t([window.frameElement])}catch(t){r=null}return[document.documentElement,r,n,e]}}();\nreturn s(arg)\n}"}}
+eyes      | 2022-11-08T19:19:34.318Z [INFO ] ==>  {"name":"Driver.executeScript","key":"c17ac6ef-b8ca-4334-838c-5c441408baf4","payload":{"result":[{"applitools-ref-id":"a9aa2520-7f91-4bb5-996a-5194009514ad","type":"element"},"/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/IFRAME[1]",true,false]}}
+eyes      | 2022-11-08T19:19:34.319Z [INFO ] <==  {"name":"Driver.findElements","key":"603b9b4b-a784-4350-843f-dbec3ecc985f","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]","type":"css"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.321Z [INFO ] ==>  {"name":"Driver.findElements","key":"603b9b4b-a784-4350-843f-dbec3ecc985f","payload":{"result":[{"applitools-ref-id":"49638e2c-2ee7-4fc7-8b6d-02c7237108d1","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.321Z [INFO ] <==  {"name":"Driver.findElements","key":"aa1b08a1-c05d-4406-8d06-3aaef60930f1","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"selector":{"selector":"[data-cy=\"main-container\"]"},"parent":null}}
+eyes      | 2022-11-08T19:19:34.323Z [INFO ] ==>  {"name":"Driver.findElements","key":"aa1b08a1-c05d-4406-8d06-3aaef60930f1","payload":{"result":[{"applitools-ref-id":"9dc7a17e-86f9-46f4-86cd-9f4ad9b5a42c","type":"element"}]}}
+eyes      | 2022-11-08T19:19:34.323Z [INFO ] <==  {"name":"Driver.executeScript","key":"d6ea94bd-0adb-46bd-8e96-440dafcc482b","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){var o=t[0],e=t[1];return o.map((function(t,o){var r=[t];if(t.getRootNode)for(var a=t.getRootNode();a!==document;a=a.host.getRootNode())r.push(a.host);var n=e[o];return r.map((function(t){var o=t.getAttribute(\"data-applitools-selector\"),e=o?o+\" \"+n:n;return t.setAttribute(\"data-applitools-selector\",e),'[data-applitools-selector~=\"'+n+'\"]'}))}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"49638e2c-2ee7-4fc7-8b6d-02c7237108d1","type":"element"},{"applitools-ref-id":"9dc7a17e-86f9-46f4-86cd-9f4ad9b5a42c","type":"element"}],["0cf198ff-b2b9-4fac-bb6a-391e1f5c8a59","45919578-f2f4-4196-8f9d-1970e90f4475"]]}}
+eyes      | 2022-11-08T19:19:34.325Z [INFO ] ==>  {"name":"Driver.executeScript","key":"d6ea94bd-0adb-46bd-8e96-440dafcc482b","payload":{"result":[["[data-applitools-selector~=\"0cf198ff-b2b9-4fac-bb6a-391e1f5c8a59\"]"],["[data-applitools-selector~=\"45919578-f2f4-4196-8f9d-1970e90f4475\"]"]]}}
+eyes      | 2022-11-08T19:19:34.579Z [INFO ] <==  {"name":"Driver.getViewportSize","key":"0f2c3b30-ebaf-4611-a7d0-41d44da91ef9","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.581Z [INFO ] ==>  {"name":"Driver.getViewportSize","key":"0f2c3b30-ebaf-4611-a7d0-41d44da91ef9","payload":{"result":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:34.582Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"3de05111-9099-4f39-84df-25e37213a78d","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"size":{"width":1280,"height":660}}}
+eyes      | 2022-11-08T19:19:34.584Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"3de05111-9099-4f39-84df-25e37213a78d","payload":{}}
+eyes      | 2022-11-08T19:19:34.700Z [INFO ] <==  {"name":"Driver.getViewportSize","key":"c2ed1482-3ecb-4580-89d0-1388eebb4eaa","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.702Z [INFO ] ==>  {"name":"Driver.getViewportSize","key":"c2ed1482-3ecb-4580-89d0-1388eebb4eaa","payload":{"result":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:34.703Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"9fdbcd56-4eb2-4d83-b546-dd028b684ce2","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"size":{"width":1280,"height":660}}}
+eyes      | 2022-11-08T19:19:34.706Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"9fdbcd56-4eb2-4d83-b546-dd028b684ce2","payload":{}}
+eyes      | 2022-11-08T19:19:34.760Z [INFO ] <==  {"name":"Driver.getViewportSize","key":"905b19a4-b047-47de-be1d-856dbe1f0380","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.762Z [INFO ] ==>  {"name":"Driver.getViewportSize","key":"905b19a4-b047-47de-be1d-856dbe1f0380","payload":{"result":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:34.763Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"a7259b3a-43fb-425f-be7b-59aeed2b1ddc","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"size":{"width":1280,"height":660}}}
+eyes      | 2022-11-08T19:19:34.765Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"a7259b3a-43fb-425f-be7b-59aeed2b1ddc","payload":{}}
+eyes      | 2022-11-08T19:19:34.840Z [INFO ] <==  {"name":"Driver.getCookies","key":"2237d04e-b7b3-4572-b9c8-4f4a6364ff10","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.840Z [INFO ] <==  {"name":"Driver.getCookies","key":"71892306-99ec-432f-8daf-0343b19d4e08","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.843Z [INFO ] ==>  {"name":"Driver.getCookies","key":"2237d04e-b7b3-4572-b9c8-4f4a6364ff10","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:34.843Z [INFO ] ==>  {"name":"Driver.getCookies","key":"71892306-99ec-432f-8daf-0343b19d4e08","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:34.853Z [INFO ] <==  {"name":"Driver.executeScript","key":"69cef414-636b-43fc-9255-ef0a35267eb1","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:34.857Z [INFO ] <==  {"name":"Driver.executeScript","key":"398e76b9-c597-492a-a450-2e858d3c9816","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:34.866Z [INFO ] <==  {"name":"Driver.getCookies","key":"49579f62-819b-4694-acc5-d9528a45f7dc","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:34.869Z [INFO ] ==>  {"name":"Driver.getCookies","key":"49579f62-819b-4694-acc5-d9528a45f7dc","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:34.879Z [INFO ] <==  {"name":"Driver.executeScript","key":"64974720-44a7-4624-ad52-d745b5429242","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:34.952Z [INFO ] ==>  {"name":"Driver.executeScript","key":"64974720-44a7-4624-ad52-d745b5429242","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.075Z [INFO ] ==>  {"name":"Driver.executeScript","key":"398e76b9-c597-492a-a450-2e858d3c9816","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.104Z [INFO ] ==>  {"name":"Driver.executeScript","key":"69cef414-636b-43fc-9255-ef0a35267eb1","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.153Z [INFO ] <==  {"name":"Driver.executeScript","key":"a74e6407-4f52-4607-9863-a2c1f8001311","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.165Z [INFO ] ==>  {"name":"Driver.executeScript","key":"a74e6407-4f52-4607-9863-a2c1f8001311","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Green\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"nam
+eyes      | 2022-11-08T19:19:35.168Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"2ac53aa6-817a-4bbb-9f7d-20ca87d798c5","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"size":{"width":375,"height":660}}}
+eyes      | 2022-11-08T19:19:35.172Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"2ac53aa6-817a-4bbb-9f7d-20ca87d798c5","payload":{}}
+eyes      | 2022-11-08T19:19:35.273Z [INFO ] <==  {"name":"Driver.getCookies","key":"c592ebc2-dc33-4165-9f21-83503c17db60","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.276Z [INFO ] ==>  {"name":"Driver.getCookies","key":"c592ebc2-dc33-4165-9f21-83503c17db60","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:35.276Z [INFO ] <==  {"name":"Driver.executeScript","key":"7132eeb1-227d-4f74-a660-38ea2b9b8391","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.283Z [INFO ] <==  {"name":"Driver.executeScript","key":"a42c40d1-d0bb-4ed2-9b60-014a21b29181","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:35.288Z [INFO ] ==>  {"name":"Driver.executeScript","key":"7132eeb1-227d-4f74-a660-38ea2b9b8391","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Blue\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"name
+eyes      | 2022-11-08T19:19:35.291Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"5fc77f8b-fb1e-4384-9033-507dbabaf5ee","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"size":{"width":375,"height":660}}}
+eyes      | 2022-11-08T19:19:35.295Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"5fc77f8b-fb1e-4384-9033-507dbabaf5ee","payload":{}}
+eyes      | 2022-11-08T19:19:35.305Z [INFO ] <==  {"name":"Driver.executeScript","key":"8b4c76d0-49ee-447f-a213-08207125a1be","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.316Z [INFO ] ==>  {"name":"Driver.executeScript","key":"8b4c76d0-49ee-447f-a213-08207125a1be","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Red\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"name\
+eyes      | 2022-11-08T19:19:35.320Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"d6458ef3-808d-42d2-9864-82a0157a538a","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"size":{"width":375,"height":660}}}
+eyes      | 2022-11-08T19:19:35.323Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"d6458ef3-808d-42d2-9864-82a0157a538a","payload":{}}
+eyes      | 2022-11-08T19:19:35.362Z [INFO ] ==>  {"name":"Driver.executeScript","key":"a42c40d1-d0bb-4ed2-9b60-014a21b29181","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.398Z [INFO ] <==  {"name":"Driver.getCookies","key":"577cb9e7-19e8-4d3c-966f-ccdacbb61895","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.400Z [INFO ] ==>  {"name":"Driver.getCookies","key":"577cb9e7-19e8-4d3c-966f-ccdacbb61895","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:35.406Z [INFO ] <==  {"name":"Driver.executeScript","key":"6bfce679-8817-4605-b2bb-9b670877dc7e","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:35.426Z [INFO ] <==  {"name":"Driver.getCookies","key":"92cce450-fe42-485f-837b-e0c2637f2b69","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.428Z [INFO ] ==>  {"name":"Driver.getCookies","key":"92cce450-fe42-485f-837b-e0c2637f2b69","payload":{"result":[]}}
+eyes      | 2022-11-08T19:19:35.435Z [INFO ] <==  {"name":"Driver.executeScript","key":"b1669d4d-6628-41e9-b870-aa00ec6c45ee","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __processPagePoll() {\n  var processPagePoll=function(){\"use strict\";return function(){const e=function(e){return function(){function t(e,t=0){const n=e.charCodeAt(t);return n>=55296&&n<56320?1024*(n-55296)+(e.charCodeAt(t+1)-56320)+65536:56320<=n&&n<=57343?-1:n}var n=function(e,n){const r=[];let a=0;for(let i=0;i<e.length;++i){const o=t(e,i);let s=0;o>0&&(s=o<128?1:o<2048?2:o<65536?3:o<2097152?4:o<67108864?5:6),a+s>n?(r.push(i),a=s):a+=s}return r};const r=\"SUCCESS\",a=\"SUCCESS_CHUNKED\",i=\"ERROR\";var o=function(e,t,o={}){const s=function(e,{chunkByteLength:t=0}={}){if(e){if(e.value){if(t){if(!e.chunks){const r=JSON.stringify(e.value);e.chunks=n(r,t),e.chunks.length>0&&(e.from=0,e.value=r)}if(e.from>=0)return{status:a,value:e.value.substring(e.
+eyes      | 2022-11-08T19:19:35.466Z [INFO ] ==>  {"name":"Driver.executeScript","key":"6bfce679-8817-4605-b2bb-9b670877dc7e","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.490Z [INFO ] ==>  {"name":"Driver.executeScript","key":"b1669d4d-6628-41e9-b870-aa00ec6c45ee","payload":{"result":"{\"status\":\"WIP\"}"}}
+eyes      | 2022-11-08T19:19:35.564Z [INFO ] <==  {"name":"Driver.executeScript","key":"99b24f33-b6eb-4372-b023-df52d32115ef","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.573Z [INFO ] ==>  {"name":"Driver.executeScript","key":"99b24f33-b6eb-4372-b023-df52d32115ef","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Green\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"nam
+eyes      | 2022-11-08T19:19:35.575Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"d190553f-c7b2-4e56-9dc3-72f5586675c6","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"size":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:35.578Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"d190553f-c7b2-4e56-9dc3-72f5586675c6","payload":{}}
+eyes      | 2022-11-08T19:19:35.578Z [INFO ] <==  {"name":"Driver.getUrl","key":"f5b07b36-6ca5-4ccb-bf6d-8211198f70ee","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.579Z [INFO ] ==>  {"name":"Driver.getUrl","key":"f5b07b36-6ca5-4ccb-bf6d-8211198f70ee","payload":{"result":"http://localhost:4201/"}}
+eyes      | 2022-11-08T19:19:35.580Z [INFO ] <==  {"name":"Driver.getTitle","key":"e3d7c0f7-841c-4925-9d39-a65bb55e6977","payload":{"driver":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.581Z [INFO ] ==>  {"name":"Driver.getTitle","key":"e3d7c0f7-841c-4925-9d39-a65bb55e6977","payload":{"result":"Green"}}
+eyes      | 2022-11-08T19:19:35.581Z [INFO ] <==  {"name":"Driver.executeScript","key":"e297b0c2-95c7-4a27-afe3-c744d7d942bd","payload":{"context":{"applitools-ref-id":"f6f6901d-33b2-4e43-89f3-d0115f605b98","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){t[0].forEach((function(t){if(t.removeAttribute(\"data-applitools-selector\"),t.getRootNode)for(var o=t.getRootNode();o!==document;o=o.host.getRootNode())o.host.removeAttribute(\"data-applitools-selector\")}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"49638e2c-2ee7-4fc7-8b6d-02c7237108d1","type":"element"},{"applitools-ref-id":"9dc7a17e-86f9-46f4-86cd-9f4ad9b5a42c","type":"element"}]]}}
+eyes      | 2022-11-08T19:19:35.583Z [INFO ] ==>  {"name":"Driver.executeScript","key":"e297b0c2-95c7-4a27-afe3-c744d7d942bd","payload":{}}
+eyes      | 2022-11-08T19:19:35.585Z [INFO ] <==  {"name":"Eyes.check","key":"ae754ee4-ffcb-4cc4-9aef-fbe6e518f8bf","payload":{"result":{"asExpected":true,"userTestId":"green--aab4f932-fdbd-4fcb-8e9b-d71b337cf289","renderer":{"width":1280,"height":600,"name":"chrome"},"promise":{}}}}
+eyes      | 2022-11-08T19:19:35.592Z [INFO ] ==>  {"name":"Eyes.close","key":"5399ea6d-de80-4a9d-8577-3d31aa6486bc","payload":{"eyes":{"applitools-ref-id":"a68c904e-be80-4e88-bbcf-b3149839a97c"},"throwErr":false}}
+    ✓ should display green (4068ms)
+
+
+  1 passing (4s)
+
+eyes      | 2022-11-08T19:19:35.669Z [INFO ] <==  {"name":"Driver.executeScript","key":"d6b5b3de-bdee-4e5d-9c92-ee9c40fa8037","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.678Z [INFO ] ==>  {"name":"Driver.executeScript","key":"d6b5b3de-bdee-4e5d-9c92-ee9c40fa8037","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Blue\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"name
+eyes      | 2022-11-08T19:19:35.679Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"bfed96ad-4e1a-424a-b43c-970343d579af","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"size":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:35.683Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"bfed96ad-4e1a-424a-b43c-970343d579af","payload":{}}
+eyes      | 2022-11-08T19:19:35.683Z [INFO ] <==  {"name":"Driver.getUrl","key":"21f66b2d-72ac-46dd-b332-8c6be6b5f3cc","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.685Z [INFO ] ==>  {"name":"Driver.getUrl","key":"21f66b2d-72ac-46dd-b332-8c6be6b5f3cc","payload":{"result":"http://localhost:4200/"}}
+eyes      | 2022-11-08T19:19:35.687Z [INFO ] <==  {"name":"Driver.getTitle","key":"176153b5-3de9-4fad-9057-799f504e6d86","payload":{"driver":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.688Z [INFO ] ==>  {"name":"Driver.getTitle","key":"176153b5-3de9-4fad-9057-799f504e6d86","payload":{"result":"Blue"}}
+eyes      | 2022-11-08T19:19:35.689Z [INFO ] <==  {"name":"Driver.executeScript","key":"d3ae1641-bb72-4c18-8a04-9b71b824762c","payload":{"context":{"applitools-ref-id":"b2aacd7e-95e7-46a8-a9c6-efe3c8f60167","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){t[0].forEach((function(t){if(t.removeAttribute(\"data-applitools-selector\"),t.getRootNode)for(var o=t.getRootNode();o!==document;o=o.host.getRootNode())o.host.removeAttribute(\"data-applitools-selector\")}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"495d50ca-b6b6-40c3-865d-253c50f48fd2","type":"element"},{"applitools-ref-id":"1441f11c-6122-40df-a5b4-a61d2546ff35","type":"element"}]]}}
+eyes      | 2022-11-08T19:19:35.690Z [INFO ] ==>  {"name":"Driver.executeScript","key":"d3ae1641-bb72-4c18-8a04-9b71b824762c","payload":{}}
+eyes      | 2022-11-08T19:19:35.690Z [INFO ] <==  {"name":"Driver.executeScript","key":"724e4044-0f88-4998-a12e-2a9f9195e22c","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"return (/* @applitools/dom-snapshot@4.7.0 */\nfunction __pollResult() {\n  var pollResult=function(){\"use strict\";return function(){const t=function(t){return function(){function t(t,n=0){const e=t.charCodeAt(n);return e>=55296&&e<56320?1024*(e-55296)+(t.charCodeAt(n+1)-56320)+65536:56320<=e&&e<=57343?-1:e}var n=function(n,e){const r=[];let o=0;for(let u=0;u<n.length;++u){const c=t(n,u);let a=0;c>0&&(a=c<128?1:c<2048?2:c<65536?3:c<2097152?4:c<67108864?5:6),o+a>e?(r.push(u),o=a):o+=a}return r};const e=\"SUCCESS\",r=\"SUCCESS_CHUNKED\",o=\"ERROR\";var u=function(t,u,c={}){const a=function(t,{chunkByteLength:u=0}={}){if(t){if(t.value){if(u){if(!t.chunks){const e=JSON.stringify(t.value);t.chunks=n(e,u),t.chunks.length>0&&(t.from=0,t.value=e)}if(t.from>=0)return{status:r,value:t.value.substring(t.from,t.fro
+eyes      | 2022-11-08T19:19:35.691Z [INFO ] <==  {"name":"Eyes.check","key":"99ed7a35-aee8-4f61-9949-e4df45a0e321","payload":{"result":{"asExpected":true,"userTestId":"blue--8e5028d9-7c0d-4e79-8522-33ce2e887b7c","renderer":{"width":1280,"height":600,"name":"chrome"},"promise":{}}}}
+eyes      | 2022-11-08T19:19:35.698Z [INFO ] ==>  {"name":"Eyes.close","key":"a4e3b72a-507f-4ccb-ad44-96a2bb1f9a66","payload":{"eyes":{"applitools-ref-id":"4b107353-217d-4e2e-a213-f32140c98a58"},"throwErr":false}}
+eyes      | 2022-11-08T19:19:35.698Z [INFO ] ==>  {"name":"Driver.executeScript","key":"724e4044-0f88-4998-a12e-2a9f9195e22c","payload":{"result":"{\"status\":\"SUCCESS\",\"value\":{\"cdt\":[{\"nodeType\":9,\"childNodeIndexes\":[1,184]},{\"nodeType\":10,\"nodeName\":\"html\"},{\"nodeType\":3,\"nodeValue\":\" \"},{\"nodeType\":1,\"nodeName\":\"SCRIPT\",\"attributes\":[{\"name\":\"type\",\"value\":\"text/javascript\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"charset\",\"value\":\"utf-8\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":3,\"nodeValue\":\"Red\"},{\"nodeType\":1,\"nodeName\":\"TITLE\",\"attributes\":[],\"childNodeIndexes\":[7]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"BASE\",\"attributes\":[{\"name\":\"href\",\"value\":\"/\"}],\"childNodeIndexes\":[]},{\"nodeType\":3,\"nodeValue\":\"\\n    \"},{\"nodeType\":1,\"nodeName\":\"META\",\"attributes\":[{\"name\":\"name\
+eyes      | 2022-11-08T19:19:35.701Z [INFO ] <==  {"name":"Driver.setViewportSize","key":"e87599fe-2676-4886-8525-b67174984bdf","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"size":{"width":1000,"height":660}}}
+eyes      | 2022-11-08T19:19:35.704Z [INFO ] ==>  {"name":"Driver.setViewportSize","key":"e87599fe-2676-4886-8525-b67174984bdf","payload":{}}
+eyes      | 2022-11-08T19:19:35.705Z [INFO ] <==  {"name":"Driver.getUrl","key":"a320ca58-35d3-49e8-ac6f-3d3dec7cdbd1","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+eyes      | 2022-11-08T19:19:35.706Z [INFO ] ==>  {"name":"Driver.getUrl","key":"a320ca58-35d3-49e8-ac6f-3d3dec7cdbd1","payload":{"result":"http://localhost:4202/"}}
+    ✓ should display blue (4078ms)
+eyes      | 2022-11-08T19:19:35.707Z [INFO ] <==  {"name":"Driver.getTitle","key":"07c412c2-e8c7-463c-b761-c05b547a4541","payload":{"driver":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"}}}
+
+
+  1 passing (4s)
+
+eyes      | 2022-11-08T19:19:35.709Z [INFO ] ==>  {"name":"Driver.getTitle","key":"07c412c2-e8c7-463c-b761-c05b547a4541","payload":{"result":"Red"}}
+eyes      | 2022-11-08T19:19:35.710Z [INFO ] <==  {"name":"Driver.executeScript","key":"8cd880ea-da7d-4791-95fe-3baf1bb7f79d","payload":{"context":{"applitools-ref-id":"1996da66-7c4d-494e-bb80-d5612dec9f93","type":"context"},"script":"function(arg){\nvar s=function(){\"use strict\";return function(t){t[0].forEach((function(t){if(t.removeAttribute(\"data-applitools-selector\"),t.getRootNode)for(var o=t.getRootNode();o!==document;o=o.host.getRootNode())o.host.removeAttribute(\"data-applitools-selector\")}))}}();\nreturn s(arg)\n}","arg":[[{"applitools-ref-id":"b7cc2c23-cf96-41ec-be3b-22cd363555ef","type":"element"},{"applitools-ref-id":"0184f661-812c-4314-8883-5f4bbbf639e0","type":"element"}]]}}
+eyes      | 2022-11-08T19:19:35.711Z [INFO ] ==>  {"name":"Driver.executeScript","key":"8cd880ea-da7d-4791-95fe-3baf1bb7f79d","payload":{}}
+eyes      | 2022-11-08T19:19:35.712Z [INFO ] <==  {"name":"Eyes.check","key":"8fcb1e15-c5be-4735-bd91-3159f9834daf","payload":{"result":{"asExpected":true,"userTestId":"red--7e8f8706-ab4c-4dcf-9004-881ff0820cf3","renderer":{"width":1280,"height":600,"name":"chrome"},"promise":{}}}}
+eyes      | 2022-11-08T19:19:35.719Z [INFO ] ==>  {"name":"Eyes.close","key":"98d523bc-90ae-4677-9f55-4e3c3c5046d4","payload":{"eyes":{"applitools-ref-id":"477ee052-d5bd-4899-b169-bf7ccc579f42"},"throwErr":false}}
+    ✓ should display red (4106ms)
+
+
+  1 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     app.spec.ts                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+
+  (Results)
+
+  (Results)
+
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     app.spec.ts                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     app.spec.ts                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/app     (1 second)
+                          s/green-e2e/videos/app.spec.ts.mp4                                        
+
+  -  Finished processing: /Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/app     (1 second)
+                          s/red-e2e/videos/app.spec.ts.mp4                                          
+
+  -  Finished processing: /Users/jbrouwer/Development/kpn/mkz-colors/dist/cypress/app     (1 second)
+                          s/blue-e2e/videos/app.spec.ts.mp4                                         
+
+eyes      | 2022-11-08T19:20:09.622Z [INFO ] <==  {"name":"Eyes.close","key":"5399ea6d-de80-4a9d-8577-3d31aa6486bc","payload":{"result":[{"exactMatches":0,"strictMatches":0,"contentMatches":0,"layoutMatches":0,"noneMatches":0,"steps":1,"matches":1,"mismatches":0,"missing":0,"new":0,"name":"green","secretToken":"CKu3nHewCUeMk4NSLyYbZwOeQvLJnX42xomxEdH8Agg110","id":"00000251734365621278","status":"Passed","appName":"Colors","baselineId":"k~!d69b202a-e29b-4dd0-9e27-5d9eb5fb6d0a~!289b133e-0ea6-49de-b673-a370a98d359e~!90dfb271-e2a0-478a-adb7-2c971f6b7a9f~!SpdADYUmTUimi9nIya8bsrA8dy1Yu_LMc3jfxuPv9_A_~!","batchName":"mkz-colors","batchId":"00000251734365621950","branchName":"mkz-colors/some-branch","hostOS":"Linux","hostApp":"Chrome","hostDisplaySize":{"width":1280,"height":600},"startedAt":"2022-11-08T19:19:38.6118021+00:00","duration":11,"isNew":false,"isDifferent":false,"isAborted":false,"defaultMatchSettings":{"matchLevel":"Strict","ignore":[],"strict":[],"content":[],"layout":[],"floating":[],"accessibility":[],"identifiedRegions":{"ign
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  app.spec.ts                              00:04        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:04        1        1        -        -        -  
+
+eyes      | 2022-11-08T19:20:09.743Z [INFO ] <==  {"name":"Eyes.close","key":"a4e3b72a-507f-4ccb-ad44-96a2bb1f9a66","payload":{"result":[{"exactMatches":0,"strictMatches":0,"contentMatches":0,"layoutMatches":0,"noneMatches":0,"steps":1,"matches":1,"mismatches":0,"missing":0,"new":0,"name":"blue","secretToken":"A98Q100Cer1PukyfCNyvkHWdvfv5rCTEWXLid9vkdT5aJs110","id":"00000251734365621591","status":"Passed","appName":"Colors","baselineId":"k~!d69b202a-e29b-4dd0-9e27-5d9eb5fb6d0a~!289b133e-0ea6-49de-b673-a370a98d359e~!6dbcb384-7809-478a-a37b-3a8dcb36135a~!SpdADYUmTUimi9nIya8bsrA8dy1Yu_LMc3jfxuPv9_A_~!","batchName":"mkz-colors","batchId":"00000251734365621950","branchName":"mkz-colors/some-branch","hostOS":"Linux","hostApp":"Chrome","hostDisplaySize":{"width":1280,"height":600},"startedAt":"2022-11-08T19:19:38.3149215+00:00","duration":11,"isNew":false,"isDifferent":false,"isAborted":false,"defaultMatchSettings":{"matchLevel":"Strict","ignore":[],"strict":[],"content":[],"layout":[],"floating":[],"accessibility":[],"identifiedRegions":{"i
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  app.spec.ts                              00:04        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:04        1        1        -        -        -  

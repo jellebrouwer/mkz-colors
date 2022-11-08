@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { UserService } from '@mkz-colors/user';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'mkz-colors-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blue';
+  public user$: Observable<any>;
+  constructor(private userService: UserService) {
+    this.user$ = this.userService.getUser();
+  }
 }

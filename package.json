@@ -7,7 +7,8 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "e2e": "npx nx run-many --target=e2e-mock --all --parallel=3"
   },
   "private": true,
   "dependencies": {
@@ -33,11 +34,14 @@
     "@angular/compiler-cli": "~13.2.0",
     "@angular/language-service": "~13.2.0",
     "@applitools/eyes-cypress": "^3.27.6",
+    "@ng-apimock/core": "^3.5.1",
+    "@ng-apimock/dev-interface": "^3.1.1",
     "@nrwl/cli": "13.8.5",
     "@nrwl/cypress": "13.8.5",
     "@nrwl/eslint-plugin-nx": "13.8.5",
     "@nrwl/jest": "13.8.5",
     "@nrwl/linter": "13.8.5",
+    "@nrwl/node": "^13.8.5",
     "@nrwl/tao": "13.8.5",
     "@nrwl/workspace": "13.8.5",
     "@types/jest": "27.0.2",
@@ -51,7 +55,9 @@
     "jest": "27.2.3",
     "jest-preset-angular": "11.1.1",
     "prettier": "^2.5.1",
+    "start-server-and-test": "^1.14.0",
     "ts-jest": "27.0.5",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "winston": "^3.8.2"
   }
 }

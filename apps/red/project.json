@@ -58,12 +58,13 @@
           "browserTarget": "red:build:production"
         },
         "development": {
-          "browserTarget": "red:build:development"
+          "browserTarget": "red:build:development",
+          "proxyConfig": "apps/red/proxy.conf.js"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4201
+        "port": 4202
       }
     },
     "extract-i18n": {
